@@ -15,6 +15,25 @@ window.addEventListener('load', e => {
     for (let pair of data) {
       formValues.push(pair[1]);
     }
+    createConference(formValues[0], formValues[1]);
   })
-})
+});
+
+function createConference(number, name) {
+  console.log(number);
+  console.log(name);
+  fetch('http://localhost:8080/createConference', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      'conferenceNumber': number,
+      'conferenceName': name
+    })
+  }).then(rsp => { 
+    console.log(rsp);
+  });
+}
 

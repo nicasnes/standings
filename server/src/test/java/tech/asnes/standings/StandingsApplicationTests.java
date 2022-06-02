@@ -17,7 +17,7 @@ public class StandingsApplicationTests {
 
 	@Autowired
 	private TestRestTemplate restTemplate;
-	
+
 	@Autowired
 	private StandingsApplication controller;
 
@@ -25,22 +25,20 @@ public class StandingsApplicationTests {
 	public void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();
 	}
-
-
-
+	
 	@Test
 	public void greetingShouldReturnDefaultMessage() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/test",
 				String.class)).contains("Hello world!");
 	}
 
-  @Test
+	@Test
 	public void greetingWithNameReturnsHelloName() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/test?name=Nic",
 				String.class)).contains("Hello Nic!");
 	}
 
-  @Test
+	@Test
 	public void databaseConnectionAndSimpleQuery() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/count",
 				String.class)).contains("4");
