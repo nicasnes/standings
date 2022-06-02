@@ -23,18 +23,18 @@ import java.sql.ResultSet;
 		public static void main(String[] args) {
 			SpringApplication.run(StandingsApplication.class, args);
 			System.out.println(generateLogMessage());
-			
-			// StandingsApplication standings = new StandingsApplication();
 		}
 
+		/* Basic test endpoint */
 		@GetMapping("/test")
 		public String test(@RequestParam(value = "name", defaultValue = "world") String name) {
 			return String.format("Hello %s!", name);
 		}
 
+		/* Basic endpooint to test database count */
 		@GetMapping("/count")
 		public String count() {
-			return String.format("Count is %d!", getTestCount());
+			return String.format("%d", getTestCount());
 		}
 
 		private static String generateLogMessage() { 
