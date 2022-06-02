@@ -12,7 +12,7 @@
 	<artifactId>standings</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Standings</name>
-	<description>An application for league play standings</description>
+	<description>A standings application for league play formats.</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -22,6 +22,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
