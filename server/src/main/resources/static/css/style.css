@@ -1,0 +1,24 @@
+h1 { 
+  text-align: center;
+  margin-top: 25px;
+}
+
+#sel { 
+  text-align: center;
+}
+
+form { 
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+label { 
+  display: block;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 1%;
+}
