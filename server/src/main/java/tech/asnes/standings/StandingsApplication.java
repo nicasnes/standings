@@ -45,19 +45,14 @@ import java.net.URI;
 			return String.format("%d", getTestCount());
 		}
 
-		/* Basic endpooint to test database count */
-		@PostMapping(
-			value="/createConference"
-		)
+		/* Create a conference and add it to the database with a given ID number and name  */
+		@PostMapping(value="/createConference")
 		public ResponseEntity<Conference> createConference(@RequestBody Conference conference) {
-			System.out.println(conference);
-			System.out.println(conference.getConferenceName());
-			System.out.println(conference.getConferenceNumber());
 			createConferenceInDatabase(conference.getConferenceNumber(), conference.getConferenceName());
+			System.out.println("Created new conference and added to the database");
 			return ResponseEntity
 						 .created(URI.create(String.format("/createConference/%d%s", conference.getConferenceNumber(), conference.getConferenceName())))
 						 .body(conference);
-
 		}
 
 		private void createConferenceInDatabase(int num, String name) {

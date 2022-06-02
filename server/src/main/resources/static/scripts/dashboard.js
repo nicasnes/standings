@@ -20,8 +20,6 @@ window.addEventListener('load', e => {
 });
 
 function createConference(number, name) {
-  console.log(number);
-  console.log(name);
   fetch('http://localhost:8080/createConference', {
     method: 'POST',
     headers: {
