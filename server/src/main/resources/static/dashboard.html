@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="./scripts/dashboard.js"></script>
+  <script type="module", src="./scripts/dashboard.js"></script>
   <link rel="stylesheet" href="./css/style.css">
 <head> 
     <title>Admin Dashboard</title> 
@@ -43,7 +43,7 @@
 
   <form id="divisions" hidden>
     <label for="dnum">Division number</label>
-    <input type="text" id="cconf" name="cconf">
+    <input type="text" id="dnum" name="dnum">
     
     <label for="dname">Division name</label>
     <input type="text" id="dname" name="dname">
@@ -58,5 +58,47 @@
     <input type="text" id="tid2" name="tid2">
     <input type="submit" value="Submit" id="msubmit">
   </form> 
+
+  <table id="ctable">
+    <caption>Conferences</caption>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  </table>
+
+  <table id="dtable">
+    <caption>Divisions</caption>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  </table>
+
+  <table id="mtable">
+    <caption>Matches</caption>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Team 1</th>
+      <th>Team 2</th>
+    </tr>
+  </thead>
+  </table>
+
+  <table id="ttable">
+    <caption>Teams</caption>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Conference</th>
+      <th>Division</th>
+    </tr>
+  </thead>
 </body>
 </html>
